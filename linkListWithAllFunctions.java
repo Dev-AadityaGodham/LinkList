@@ -117,10 +117,12 @@ public class Main {
         list.addFirst("is");//this add 'is' to before 'a' 
         list.addLast("list");//thsi will add 'list' to the end of the list
         list.PrintList();//print the hole list
+        System.out.println("Size of the list is "+list.sizeOfList());
         list.deleteFirst();//will deleteFirst node which is 'is'
         list.PrintList();//print the list after deleting the first node
+        System.out.println("Size of the list is "+list.sizeOfList());
         list.deleteLast();//this will deleteLast node which is 'list'
         list.PrintList();//print the list after deleting the las node
-        System.out.println(list.sizeOfList());
+        System.out.println("Size of the list is "+list.sizeOfList());
     }
 }
