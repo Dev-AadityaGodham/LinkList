@@ -2,6 +2,7 @@
 class LL {
   //declaration of Node head
     Node head;
+    private int size;
 
   //the nested class Node having two paramerersString data and Node next;
     class Node {
@@ -12,6 +13,7 @@ class LL {
             this.data = data;
           //for every node next node is null
             this.next = null;
+            size++;
         }
     }
     //this will add new node to the net of existing node
@@ -68,7 +70,7 @@ class LL {
             System.out.println("the List is empty");
             return;
         }
-    
+        size--;
         //if list have only one node the remove the node
         if(head.next==null){
             head=null;
@@ -85,8 +87,9 @@ class LL {
             System.out.println("the List is empty");
             return;
         }
-        if(h
-        //if list have only one node the remove the nodeead.next==null){
+        size--;
+        //if list have only one node the remove the node
+        if(head.next==null){
             head=null;
             return;
         }
@@ -102,6 +105,9 @@ class LL {
         //do secondLast.empty = null //secondLast.next means last node of the list
         secondLast.next = null;
     }
+    public int sizeOfList(){
+        return size;
+    }
 }
 
 public class Main {
@@ -115,5 +121,6 @@ public class Main {
         list.PrintList();//print the list after deleting the first node
         list.deleteLast();//this will deleteLast node which is 'list'
         list.PrintList();//print the list after deleting the las node
+        System.out.println(list.sizeOfList());
     }
 }
