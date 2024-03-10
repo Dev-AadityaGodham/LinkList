@@ -3,6 +3,10 @@ class LL {
   //declaration of Node head
     Node head;
     private int size;
+  //constructor to initialize the value of size
+LL(){
+    this.size=0;
+     }
 
   //the nested class Node having two paramerersString data and Node next;
     class Node {
